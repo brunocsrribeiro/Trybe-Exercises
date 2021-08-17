@@ -1,0 +1,7 @@
+# BLOCO 02 - GIT, GITHUB E INTERNET
+
+Nesse Bloco aprendi sobre a estrutura do **Unix**, assim como a trabalhar utilizando *Command Line Interface (CLI)*. Também aprendi a utilizar o **Git e GitHub** para o controle de versão de arquivos. E aprofundei meus conhecimento sobre a Internet e como ela funciona.
+
+Com isso me tornei capaz de executar comandos no terminal para navegar entre diretórios, criar e manipular arquivos e diretórios, realizar buscas, alterar as permissões de arquivos e diretórios e verificar o status e enviar sinais a processos UNIX. Também me tornei capaz de instalar e configurar o Git no meu computador, salvar projetos no repositório Git local, controlar as alterações e versões dos meus arquivos, enviar projetos para o repositório remoto do GitHub, copiar um repositório já existente no GitHub para o meu computador, abrir *Pull Requests* e trabalhar em um mesmo projeto, com mais de uma pessoa, de forma assíncrona e distribuída.  E por último, mas, não menos importante, nesse bloco me tornei capaz de explicar de forma simples como a **internet** funciona, entender o modelo *Cliente & Servidor* e identificar suas partes, compreender como funcionam os protocolos `HTTP` e `HTTPS` e a identificar quais os tipos de requisição podem ser feitos através desses protocolos.
+
+[Trybe](https://www.betrybe.com/).
