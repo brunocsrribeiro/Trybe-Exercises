@@ -1,0 +1,60 @@
+ol li {
+    background-color: yellow;
+}
+
+ol li:nth-child(2n) {
+    color: green;
+}
+
+ol li:nth-child(2n+1) {
+    text-transform: uppercase;
+}
+
+h1, h3{
+    color: red;
+}
+h1 em {
+    font-size: 40px;
+    border: 1px solid #000;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+ul.languages li:nth-child(-n+3) {
+    color: blue;
+}
+
+.languages-color {
+    background-color: pink;
+}
+
+ul.big-friends-devs li a {
+    text-decoration: none;
+}
+
+ul.big-friends-devs li.big-friends-devs-stack a:hover {
+    color: orange;
+
+}
+
+ul.big-friends-devs li.big-friends-devs-w3c a:hover {
+    color: green;
+}
+
+ul.big-friends-devs li.big-friends-devs-mdn a:hover {
+    color: black;
+}
+
+ul.big-friends-devs li.big-friends-devs-devdocs a:hover {
+    color: yellow;
+}
+
+ul.big-friends-devs li.big-friends-devs-trybe a:hover {
+    color: #11a36a;
+}
