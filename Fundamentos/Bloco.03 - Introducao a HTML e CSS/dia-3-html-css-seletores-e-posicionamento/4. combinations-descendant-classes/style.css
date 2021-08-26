@@ -1,5 +1,6 @@
 ol li {
     background-color: yellow;
+    list-style-position: inside;
 }
 
 ol li:nth-child(2n) {
