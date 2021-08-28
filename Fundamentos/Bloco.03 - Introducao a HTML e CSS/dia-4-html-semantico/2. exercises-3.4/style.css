@@ -1,0 +1,72 @@
+/* GENERAL STYLE */
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(254, 251, 233);
+}
+
+/* HEADER CONTAINER STYLE */
+#header-container {
+  background-color: rgb(239, 238, 221);
+  height: 60px;
+  padding: 15px;
+  width: 100%;
+}
+
+#header-container h1 {
+  font-family: ubuntu,sans-serif;
+  font-size: 2.2em;
+  margin: 0 auto;
+  width: 750px;
+  color: rgb(24, 58, 29);
+}
+
+/* NAVIGATION STYLE */
+#navigation-container {
+  background-color: rgba(244, 164, 96, 0.6);
+  height: 25px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-top: 15px;
+  width: 100%;
+}
+
+#navigation-container ul li {
+  display: inline;
+  margin-left: 15px;
+  list-style: none;
+}
+
+#navigation-container ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-family: ubuntu, sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#navigation-container ul li a:hover {
+  color: rgba(24, 58, 29, 0.5);
+  transition: 1500ms;
+}
+
+/* MAIN CONTAINER STYLE */
+#main-container {
+
+}
+
+/* ASIDE CONTAINER STYLE */
+#aside-container {
+
+}
+
+/* FOOTER CONTAINER STYLE */
+#footer-container {
+
+}
