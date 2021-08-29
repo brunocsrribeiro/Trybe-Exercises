@@ -3,7 +3,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
+}
+a {
+  color: rgba(10, 110, 90, 1);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+span {
+  font-weight: 700;
 }
 
 body {
@@ -18,18 +28,18 @@ table {
   width: 63%;
 }
 
-h2::after, h4::after {
-  content: '';
-  width: 90px;
+h2::after, h3::after {
   background: currentColor;
-  height: 4px;
+  content: '';
   display: block;
+  height: 4px;
   margin: 10px auto;
+  width: 90px;
 }
 
-h4 {
-  text-align: center;
+h3 {
   color: rgba(10, 10, 10, 0.6);
+  text-align: center;
 }
 
 /* HEADER CONTAINER STYLE */
@@ -41,16 +51,16 @@ h4 {
 }
 
 #header-container h1 {
+  color: rgb(24, 58, 29);
   font-family: ubuntu,sans-serif;
   font-size: 2.2em;
   margin: 0 auto;
-  width: 750px;
-  color: rgb(24, 58, 29);
+  width: 262px;
 }
 
 /* NAVIGATION STYLE */
 #navigation-container {
-  background-color: rgb(244, 164, 96);
+  background-color: #5c12ca57;
   height: 25px;
   padding-bottom: 10px;
   padding-right: 15px;
@@ -81,17 +91,26 @@ h4 {
 
 /* MAIN CONTAINER STYLE */
 #main-container {
-  border: 1px solid red;
-  margin-left: 15px;
+  /* border: 1px solid red; */
+  margin-left: 0 auto;
   padding: 60px 15px 20px;
-  width: 70%;
+  width: 98%;
 }
 
+/* ARTICLE CONTAINER STYLE */
 .article-container {
-  border: 1px solid green;
   padding: 10px;
   position: relative;
-  width: 98%;
+  width: 65%;
+}
+
+.article-container-header h1 {
+  color: #8f4a1c;
+  font-family: ubuntu;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .article-container h2 {
@@ -102,6 +121,72 @@ h4 {
   text-align: center;
 }
 
+/* SECTION CONTAINER STYLE */
+.section-container-species,
+.section-container-curiosities,
+.section-container-references {
+  border-radius: 5px;
+  box-shadow: 0 1px 0.5em rgb(168, 167, 167);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.section-container-species td {
+  border-bottom: 1px solid rgba(101, 228, 186, 0.8);;
+  font-family: ubuntu;
+  font-style: italic;
+  padding: 11px;
+}
+
+.section-container-curiosities {
+  max-width: 100%;
+  min-height: 100%;
+  padding: 5px;
+}
+
+.section-container-curiosities div h3 {
+  margin-bottom: 20px;
+}
+
+.section-container-curiosities div p {
+  color: rgba(22, 13, 13, 0.911);
+  line-height: 24px;
+}
+
+.curiosities-1, .curiosities-2,
+.curiosities-3, .curiosities-4 {
+  background-color: #b59dd857;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0.5em rgba(7, 7, 7, 0.753);
+  margin: 13px;
+  max-width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.curiosities-3 img {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+/* TABLE CONTAINER STYLE */
+.theader {
+  border-bottom: 1px solid rgba(101, 228, 186, 0.8);;
+  font-family: ubuntu;
+  padding: 8px;
+  text-align: left;
+  width: 253px;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(101, 228, 186, 0.2);;
+}
+
+.curiosities-4 span {
+  line-height: 44px;
+}
+
+/* IMAGE CONTAINER STYLE */
 .image-1 {
   border-radius: 25px 0 0;
   box-shadow: 0 0 1em rgba(136, 216, 189, 0.6);
@@ -112,75 +197,28 @@ h4 {
 .image-2 {
   border-radius: 0 0 25px;
   box-shadow: 0 0 1em rgba(136, 216, 189, 0.6);
-  box-shadow: 0 0 1em;
   display: inline-block;
 }
 
-.section-container-species,
-.section-container-curiosities {
-  border-radius: 5px;
-  box-shadow: 0 1px 0.5em rgb(168, 167, 167);
-  padding: 15px;
-}
-
-.section-container-species td {
-  border-bottom: 1px solid rgba(244, 164, 96, 0.6);
-  font-family: ubuntu;
-  font-style: italic;
-  padding: 11px;
-}
-
-.theader {
-  border-bottom: 1px solid rgba(244, 164, 96, 0.6);
-  font-family: ubuntu;
-  padding: 8px;
-  text-align: left;
-  width: 253px;
-}
-
-tr:nth-child(odd) {
-  background-color: rgba(244, 164, 96, 0.4);
-}
-
-.section-container-curiosities {
-  margin-top: 15px;
-  max-width: 100%;
-  min-height: 100%;
-  padding: 5px;
-}
-
-.section-container-curiosities div h4 {
+.image-mantis {
   margin-bottom: 20px;
+  margin-left: 25%;
+  width: 50%;
 }
 
-.section-container-curiosities div p {
+/* SECTION CONTAINER REFERENCES */
+.references-list {
+  margin: 20px 30px;
+}
+
+.references-list ul li {
   line-height: 24px;
+  list-style-position: inside;
+  list-style-type: square;
 }
 
-.curiosities-1, .curiosities-2, .curiosities-3 {
-  box-shadow: 1px 1px 0.5em rgba(136, 216, 189, 0.6);
-  padding: 20px;
-  margin: 13px;
-  width: 26%;
-  float: left;
-  border-radius: 5px;
-}
-
-.curiosities-2, .curiosities-3 {
-  height: 285px;
-}
-
-.curiosities-4 {
-  border-radius: 5px;
-  margin: 13px;
-  padding: 20px;
-  box-shadow: 1px 1px 0.5em rgba(136, 216, 189, 0.6);
-  clear: both;
-}
-
-.curiosities-1, .curiosities-2,
-.curiosities-3, .curiosities-4 {
-  background-color: rgba(85, 97, 68, 0.514);
+.references-list ul li a {
+  color: #8844ee;
 }
 
 /* ASIDE CONTAINER STYLE */
