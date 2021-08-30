@@ -91,14 +91,15 @@ h3 {
 
 /* MAIN CONTAINER STYLE */
 #main-container {
-  /* border: 1px solid red; */
-  margin-left: 0 auto;
+  margin: 0 auto;
   padding: 60px 15px 20px;
   width: 98%;
 }
 
 /* ARTICLE CONTAINER STYLE */
 .article-container {
+  float: left;
+  margin-right: 20px;
   padding: 10px;
   position: relative;
   width: 65%;
@@ -125,10 +126,10 @@ h3 {
 .section-container-species,
 .section-container-curiosities,
 .section-container-references {
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 1px 0.5em rgb(168, 167, 167);
-  padding: 15px;
   margin-bottom: 15px;
+  padding: 15px;
 }
 
 .section-container-species td {
@@ -155,8 +156,7 @@ h3 {
 
 .curiosities-1, .curiosities-2,
 .curiosities-3, .curiosities-4 {
-  background-color: #b59dd857;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 1px 1px 0.5em rgba(7, 7, 7, 0.753);
   margin: 13px;
   max-width: 100%;
@@ -223,7 +223,37 @@ tr:nth-child(odd) {
 
 /* ASIDE CONTAINER STYLE */
 #aside-container {
+  border-radius: 10px;
+  box-shadow: 0 1px 0.5em rgb(168, 167, 167);
+  margin: 10px auto;
+  max-width: 30%;
+  min-height: 60%;
+  padding: 20px;
+}
 
+.aside-container-videos {
+  padding: 30px;
+}
+
+#aside-container h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.aside-container-videos ul li {
+  line-height: 34px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.aside-container-videos ul li::after {
+  background: #8844ee;
+  content: '';
+  display: block;
+  height: 4px;
+  margin: 10px auto;
+  width: 200px;
 }
 
 /* FOOTER CONTAINER STYLE */
