@@ -50,10 +50,10 @@ smallerArr([2, 4, 6, 7, 10, 2, -3]);
 function biggestName(name) {
   let checked = '';
   for (let idx in name) {
-    if (checked < name[idx].length) {
-      checked = name[idx].length;
+    if (checked.length < name[idx].length) {
+      checked = name[idx];
     }
   }
-  console.log(checked);
+  return checked;
 }
-biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
+console.log(biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
