@@ -45,3 +45,15 @@ function smallerArr(arrInt) {
 }
 
 smallerArr([2, 4, 6, 7, 10, 2, -3]);
+
+// 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+function biggestName(name) {
+  let checked = '';
+  for (let idx in name) {
+    if (checked < name[idx].length) {
+      checked = name[idx].length;
+    }
+  }
+  console.log(checked);
+}
+biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
