@@ -12,8 +12,8 @@ function palindromeCheck(animal) {
   }
 }
 
-palindromeCheck('arara');
-palindromeCheck('desenvolvimento');
+console.log(palindromeCheck('arara'));
+console.log(palindromeCheck('desenvolvimento'));
 
 // 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
@@ -36,4 +36,12 @@ function highestArray(arrInt) {
   console.log(highestValues);
 }
 
-highestArray([2, 4, 6, 7, 10, 2, -3]);
+highestArray([2, 3, 6, 7, 10, 1]);
+
+// 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+function smallerArr(arrInt) {
+  let lowerValue = arrInt.indexOf(Math.min.apply(0, arrInt));
+  console.log(lowerValue);
+}
+
+smallerArr([2, 4, 6, 7, 10, 2, -3]);
