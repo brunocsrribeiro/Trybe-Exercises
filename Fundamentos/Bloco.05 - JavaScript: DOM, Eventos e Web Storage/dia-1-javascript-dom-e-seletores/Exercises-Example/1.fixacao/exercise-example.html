@@ -8,12 +8,12 @@
       <p id="second-paragraph" class="tagP">Segundo parágrafo!</p>
     </header>
     <script>
-      const paragraph = document.getElementById("paragraph");
-      const secondParagraph = document.getElementById("second-paragraph");
-      const title = document.getElementById("page-title");
-      const subtitleText = document.getElementById("subtitle");
-      const paragraphs = document.getElementsByClassName("tagP");
-      const subtitleTexts = document.getElementsByTagName("h4");
+      const paragraph = document.querySelector("#paragraph");
+      const secondParagraph = document.querySelector("#second-paragraph");
+      const title = document.querySelector("#page-title");
+      const subtitleText = document.querySelector("#subtitle");
+      const paragraphs = document.querySelectorAll(".tagP");
+      const subtitleTexts = document.querySelector("h4");
 
 
       paragraph.style.color = "red";
