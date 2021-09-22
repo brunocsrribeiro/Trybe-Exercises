@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Justify Content</title>
+    <style>
+      .box {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 50px;
+        height: 60px;
+        margin: 10px 5px;
+        text-align: center;
+        width: 20%;
+      }
+
+      .box-container {
+        background-color: #0fa36b;
+        display: flex;
+        /* ADICIONE AQUI SEUS TESTES */
+        /* justify-content: flex-start; "Alinha os itens ao início do container" */
+        /* justify-content: flex-end; "Alinha os itens ao final do container" */
+        /* justify-content: center; "Alinha os itens ao centro do container" */
+        /* justify-content: space-between; "Cria um espaçamento igual entre os elementos, mantendo o primeiro grudado no início e o último no final" */
+        /* justify-content: space-around; "Cria um espaçamento entre os elementos, mas os espaçamentos do meio são duas vezes maiores que o inicial e final" */
+        justify-content: space-evenly; /* "Cria um espaçamento igual entre os elementos dentro do container pai" */
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </body>
+</html>
