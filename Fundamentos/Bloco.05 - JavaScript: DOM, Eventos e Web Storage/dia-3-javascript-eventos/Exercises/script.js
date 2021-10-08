@@ -114,3 +114,86 @@ function dayMouseOut() {
 };
 dayMouseOver();
 dayMouseOut();
+
+function tasks(task) {
+  const tasksContainer = document.querySelector('.my-tasks');
+  const taskName = document.createElement('span');
+
+  taskName.innerHTML = task;
+  tasksContainer.appendChild(taskName);
+};
+
+tasks('Ler');
+
+function taskDiv(color) {
+  const tasksContainer = document.querySelector('.my-tasks');
+  const newTask = document.createElement('div');
+
+  newTask.classList = 'task';
+  newTask.style.backgroundColor = color;
+  tasksContainer.appendChild(newTask);
+};
+
+taskDiv('red');
+
+function taskClass() {
+  const selectedTask = document.getElementsByClassName('task selected');
+  const myTasks = document.querySelector('.task');
+
+  myTasks.addEventListener('click', function(evt) {
+    if (selectedTask.length === 0) {
+      evt.target.classList = 'task selected';
+    } else {
+      evt.target.classList = 'task';
+    }
+  });
+};
+taskClass();
+
+function setDayColor() {
+  const selectedTask = document.getElementsByClassName('task selected');
+  const days = document.querySelector('#days');
+  const taskDiv = document.querySelector('.task');
+  const taskColor = taskDiv.style.backgroundColor;
+  
+  days.addEventListener('click', function(evt){
+    const eventTargetColor = evt.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      const color = selectedTask[0].style.backgroundColor;
+      evt.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      evt.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+setDayColor();
+
+function addNewTask() {
+  const getInputField = document.querySelector('#task-input');
+  const addInputButton = document.querySelector('#btn-add');
+  const getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function() {
+    if (getInputField.value.length > 0) {
+      const newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13 && getInputField.value.length > 0) {
+      const newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+};
+
+addNewTask();
