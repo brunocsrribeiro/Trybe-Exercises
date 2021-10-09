@@ -1,4 +1,4 @@
-function createDaysOfTheWeek() {
+const createDaysOfTheWeek = () => {
   const weekDaysList = document.querySelector('.week-days');
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 
@@ -13,7 +13,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Função para criar dias do mês e suas classes especificas
-function createDaysOfTheMonth() {
+const createDaysOfTheMonth = () => {
   const daysMonth = document.querySelector('#days');
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
@@ -43,7 +43,7 @@ function createDaysOfTheMonth() {
 createDaysOfTheMonth();
 
 // Função para criar botão feriado
-function createButtonHoliday(btnHoliday) {
+const createButtonHoliday = (btnHoliday) => {
   const buttons = document.querySelector('.buttons-container');
   const createButton = document.createElement('button');
   createButton.innerText = btnHoliday;
@@ -52,7 +52,7 @@ function createButtonHoliday(btnHoliday) {
 }
 createButtonHoliday('Feriados');
 
-function getHoliday() {
+const getHoliday = () => {
   const getButton = document.querySelector('#btn-holiday');
   const getHoliday = document.querySelectorAll('.holiday');
 
@@ -64,11 +64,12 @@ function getHoliday() {
         getHoliday[idx].style.backgroundColor = 'white';
       }
     }
-  })
+  });
 }
 getHoliday();
 
-function createButtonFriday(btnFriday) {
+// Função para criar botão friday
+const createButtonFriday = (btnFriday) => {
   const buttons = document.querySelector('.buttons-container');
   const createButton = document.createElement('button');
   createButton.innerText = btnFriday;
@@ -77,7 +78,7 @@ function createButtonFriday(btnFriday) {
 }
 createButtonFriday('Sexta-feira');
 
-function getFriday(friday) {
+const getFriday = (friday) => {
   const getButtonFriday = document.querySelector('#btn-friday');
   const getFriday = document.querySelectorAll('.friday');
   const mufasa = `It's Friday then`;
@@ -95,19 +96,17 @@ function getFriday(friday) {
 let fridays = [4, 11, 18, 25];
 getFriday(fridays);
 
-function dayMouseOver() {
-  const dayOver = document.querySelector('#days');
-
-  dayOver.addEventListener('mouseover', (evt) => {
+const dayMouseOver = () => {
+  const daysOver = document.querySelector('#days');
+  daysOver.addEventListener('mouseover', (evt) => {
     evt.target.style.fontSize = '25px';
     evt.target.style.fontWeight = '600';
   });
 };
 
-function dayMouseOut() {
-  const dayOut = document.querySelector('#days');
-
-  dayOut.addEventListener('mouseout', (evt) => {
+const dayMouseOut = () => {
+  const daysOut = document.querySelector('#days');
+  daysOut.addEventListener('mouseout', (evt) => {
     evt.target.style.fontSize = '20px';
     evt.target.style.fontWeight = '200';
   });
@@ -115,17 +114,16 @@ function dayMouseOut() {
 dayMouseOver();
 dayMouseOut();
 
-function tasks(task) {
+const tasks = (task) => {
   const tasksContainer = document.querySelector('.my-tasks');
   const taskName = document.createElement('span');
 
   taskName.innerHTML = task;
   tasksContainer.appendChild(taskName);
 };
-
 tasks('Ler');
 
-function taskDiv(color) {
+const taskDiv = (color) => {
   const tasksContainer = document.querySelector('.my-tasks');
   const newTask = document.createElement('div');
 
@@ -133,13 +131,11 @@ function taskDiv(color) {
   newTask.style.backgroundColor = color;
   tasksContainer.appendChild(newTask);
 };
-
 taskDiv('red');
 
-function taskClass() {
+const taskClass = () => {
   const selectedTask = document.getElementsByClassName('task selected');
   const myTasks = document.querySelector('.task');
-
   myTasks.addEventListener('click', function(evt) {
     if (selectedTask.length === 0) {
       evt.target.classList = 'task selected';
@@ -150,7 +146,7 @@ function taskClass() {
 };
 taskClass();
 
-function setDayColor() {
+const setDayColor = () => {
   const selectedTask = document.getElementsByClassName('task selected');
   const days = document.querySelector('#days');
   const taskDiv = document.querySelector('.task');
@@ -168,7 +164,7 @@ function setDayColor() {
 };
 setDayColor();
 
-function addNewTask() {
+const addNewTask = () => {
   const getInputField = document.querySelector('#task-input');
   const addInputButton = document.querySelector('#btn-add');
   const getTaskList = document.querySelector('.task-list');
@@ -195,5 +191,4 @@ function addNewTask() {
     }
   });
 };
-
 addNewTask();
