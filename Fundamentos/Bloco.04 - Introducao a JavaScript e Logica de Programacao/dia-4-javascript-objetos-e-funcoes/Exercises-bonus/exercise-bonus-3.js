@@ -20,3 +20,17 @@ const basket = [
   'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
   'Banana', 'Pera', 'Abacate', 'Uva',
 ];
+
+function counterFruits(basket) {
+  let objectFruits = {};
+  for (let idx of basket) {
+    if(typeof objectFruits[idx] !== 'undefined') {
+      objectFruits[idx] += 1;
+    } else {
+      objectFruits[idx] = 1;
+    }
+  }
+  return objectFruits;
+}
+
+console.log(counterFruits(basket));
