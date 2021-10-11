@@ -1,8 +1,15 @@
-function fatorial(num) {
-  let result = 1;
-  for(let idx = 1; idx <= num; idx += 1) {
-    result *= idx;
+const longestWord = text => {
+  let longestWord = text.split(' ');
+  let maxlength = 0;
+  let result = '';
+
+  for (word of longestWord) {
+    if(word.length > maxlength) {
+      maxlength = word.length;
+      result = word;
+    }
   }
   return result;
 }
-console.log(fatorial(5));
+
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));

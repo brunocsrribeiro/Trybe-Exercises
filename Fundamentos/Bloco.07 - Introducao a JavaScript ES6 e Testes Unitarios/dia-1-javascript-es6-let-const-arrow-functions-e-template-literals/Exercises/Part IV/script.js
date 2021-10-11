@@ -1,8 +1,16 @@
+const arraySkills = ['Estão sendo desenvolvidas'];
 
-const button = document.querySelector('#btnCount');
+const buildSkillsPhrase = (str) => {
+    const phraseTest = param => (`Tryber ${param} aqui!`);
 
-let count = 0;
-let text = document.getElementById('txt');
+    let result = `${phraseTest(str)} Minhas habilidades`;
 
-button.addEventListener('click', () => text.innerHTML = count += 1);
+    arraySkills.forEach((skill, index) =>
+    result = `${result} - ${skill}`);
 
+    result = `${result} #goTrybe`;
+
+    return result;
+}
+
+console.log(buildSkillsPhrase("Bruno"));
