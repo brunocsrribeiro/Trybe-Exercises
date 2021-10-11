@@ -120,7 +120,7 @@ footer h3 {
   /* TODO */
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1000px) {
   body {
     display: flex;
     font-family: sans-serif;
