@@ -39,19 +39,19 @@ const objMage = (min, max) => {
   let damageCaused = Math.floor(Math.random() * min) + max;
   const currentMana = mage.mana;
   let spentMana = 15;
+
+  if(currentMana < spentMana) {
+   return mage.damage = 'Não possui mana suficiente';
+  }
+  return mage.damage = damageCaused;
 }
 const min = mage.intelligence;
 const max = mage.intelligence * 2;
 objMage(min, max);
-console.log(mage.damage);
 
-
-
-
-
-
-
-
+const gameActions = {
+  // Crie as HOFs neste objeto.
+};
 
 const gameActionsSimulator = () => {
 }
