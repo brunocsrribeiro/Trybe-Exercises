@@ -66,4 +66,4 @@ const books = [
 // - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
 const authorBornIn1947 = () => books.find((book) => book.author.birthYear === 1947).author.name;
 
-console.log(authorBornIn1947());
+authorBornIn1947();
