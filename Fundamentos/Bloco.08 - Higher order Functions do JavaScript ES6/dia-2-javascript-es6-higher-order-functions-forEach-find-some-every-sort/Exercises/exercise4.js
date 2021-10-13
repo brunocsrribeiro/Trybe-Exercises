@@ -107,6 +107,6 @@ const books = [
 // ];
 
 // Ordene os livros por data de lançamento em ordem decrescente.
+const booksOrderedByReleaseYearDesc = () => books.sort((book_A, book_B) => book_B.releaseYear - book_A.releaseYear);
 
-const booksOrderedByReleaseYearDesc = () => books.sort((book_A, book_B) => book_B.releaseYear - book_A.releaseYear) 
-console.log(booksOrderedByReleaseYearDesc());
+booksOrderedByReleaseYearDesc();
