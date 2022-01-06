@@ -1,11 +1,11 @@
-const ESTADO_INICIAL_1 = {
+const INITIAL_STATE_ONE = {
   nome: 'Rodrigo',
   sobrenome: 'Santos da Silva',
   endereco: 'Rua Soldado Mathias, 765',
   cidade: 'Belo Horizonte',
 };
 
-const ESTADO_INICIAL_2 = {
+const INITIAL_STATE_TWO = {
   nome: 'Bruna',
   sobrenome: 'Santana Oliveira',
   endereco: 'Rua Holanda, 332',
@@ -15,7 +15,7 @@ const ESTADO_INICIAL_2 = {
 const CHANGE_NAME_LASTNAME_1 = "CHANGE_NAME_LASTNAME_1";
 const CHANGE_NAME_LASTNAME_2 = "CHANGE_NAME_LASTNAME_2"
 
-const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
+const myFirstReducer = (state = INITIAL_STATE_ONE, action) => {
   switch (action.type) {
     case CHANGE_NAME_LASTNAME_1:
       return {
@@ -28,7 +28,7 @@ const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
   }
 };
 
-const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
+const mySecondReducer = (state = INITIAL_STATE_TWO, action) => {
   switch (action.type) {
     case CHANGE_NAME_LASTNAME_2:
       return {
@@ -41,7 +41,7 @@ const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
   }
 };
 
-const rootReducer = Redux.combineReducers({ meuPrimeiroReducer, meuSegundoReducer });
+const rootReducer = Redux.combineReducers({ myFirstReducer, mySecondReducer });
 
 const store = Redux.createStore(rootReducer);
 
@@ -58,21 +58,21 @@ window.onload = () => {
       nome: "Roberto",
       sobrenome: "Santos da Silva",
     })
-  }, 3000);
+  }, 5000);
 };
 
 store.subscribe(() => {
-  const { meuPrimeiroReducer, meuSegundoReducer } = store.getState();
+  const { myFirstReducer, mySecondReducer } = store.getState();
 
   document.getElementById('nome-1')
-    .innerHTML = meuPrimeiroReducer.nome;
+    .innerHTML = myFirstReducer.nome;
   
   document.getElementById('sobrenome-1')
-    .innerHTML = meuPrimeiroReducer.sobrenome;
+    .innerHTML = myFirstReducer.sobrenome;
 
   document.getElementById('nome-2')
-    .innerHTML = meuSegundoReducer.nome;
+    .innerHTML = mySecondReducer.nome;
 
   document.getElementById('sobrenome-2')
-    .innerHTML = meuSegundoReducer.sobrenome;
+    .innerHTML = mySecondReducer.sobrenome;
 });
