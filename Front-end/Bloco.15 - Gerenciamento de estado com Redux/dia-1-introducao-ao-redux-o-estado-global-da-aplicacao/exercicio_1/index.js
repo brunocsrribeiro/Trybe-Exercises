@@ -1,4 +1,4 @@
-const ESTADO_INICIAL = {
+const INITIAL_STATE = {
   colors: ["white", "black", "red", "green", "blue", "yellow"],
   index: 0,
 };
@@ -17,7 +17,7 @@ const createColor = () => {
   return hexColor;
 };
 
-const reducer = (state = ESTADO_INICIAL, action) => {
+const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "NEXT_COLOR":
       return {
