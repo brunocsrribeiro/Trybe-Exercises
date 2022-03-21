@@ -1,7 +1,8 @@
-function main(a, b, c) {
+function exerciseMathPromise(a, b, c) {
+  console.log(a, b, c);
   const promise = new Promise((resolve, reject) => {
-    if (typeof(a) !== 'number' || typeof(b) !== 'number' || typeof(c) !== 'number') {
-      return reject(new Error('Informe apenas números'));
+    if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
+      reject(new Error('Informe apenas números'));
     }
     const result = ((a + b) * c);
     if (result < 50) {
@@ -12,7 +13,28 @@ function main(a, b, c) {
   return promise;
 }
 
-main(9, 5, 5)
-  .then((result) => console.log(`O valor é: ${result}`))
-  .catch((e) => console.log(e.message));
-  
+function randomNumberGenerator() {
+  return Math.floor(Math.random() * 100 + 1);
+}
+
+// function callNumbers() {
+//   const randomNumber = Array.from({length: 3}, randomNumberGenerator);
+
+//   exerciseMathPromise(...randomNumber)
+//     .then((result) => console.log(result))
+//     .catch((e) => console.error(e.message));
+// }
+
+async function callNumbersAsync() {
+  const randomNumber = Array.from({length: 3}, randomNumberGenerator);
+
+  try {
+    const newResult = await exerciseMathPromise(...randomNumber);
+    console.log(newResult);
+  } catch(e) {
+    console.error(e.message)
+  }
+}
+
+// callNumbers();
+callNumbersAsync();
