@@ -1,25 +1,25 @@
 const readline = require('readline-sync');
 
-function sorteio(numeroEscolhido, numeroSorteado) {
+function prizeDraw(chosenNumber, drawnNumber) {
 
-  if (numeroSorteado === numeroEscolhido) {
+  if (drawnNumber === chosenNumber) {
     return console.log('\nParabéns, número correto!');
   }
-  return console.log(`\nOpa, não foi dessa vez. O número era ${numeroSorteado}`);
+  return console.log(`\nOpa, não foi dessa vez. O número era ${drawnNumber}`);
 }
 
-function jogo() {
-  const numero = parseInt(Math.random() * 10);
-  const resposta = readline.questionInt(`\nTente a sorte! Escolha um número de 0 a 10 e veja se acerta: `)
+function game() {
+  const number = parseInt(Math.random() * 10);
+  const answer = readline.questionInt(`\nTente a sorte! Escolha um número de 0 a 10 e veja se acerta: `)
 
-  sorteio(resposta, numero);
+  prizeDraw(answer, number);
 
-  const queroTentarDeNovo = readline.question(`\nTentar novamente: (y/n)`);
+  const iWantToTryAgain = readline.question(`\nTentar novamente: (y/n)`);
 
-  if (queroTentarDeNovo !== 'y') {
+  if (iWantToTryAgain !== 'y') {
     return console.log('OK, até a próxima!');
   }
-  jogo();
+  game();
 }
 
-jogo();
+game();
