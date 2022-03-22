@@ -7,17 +7,17 @@ async function toFiles() {
 
   const createFilePromises = strings
     .map((string, i) => {
-      fs.writeFile(`./file_${i +1 }.txt`, string);
+      fs.writeFile(`./files${i +1 }.txt`, string);
   });
 
   await Promise.all(createFilePromises);
 
   const fileNames = [
-    'file_1.txt',
-    'file_2.txt',
-    'file_3.txt',
-    'file_4.txt',
-    'file_5.txt',
+    'files1.txt',
+    'files2.txt',
+    'files3.txt',
+    'files4.txt',
+    'files5.txt',
   ];
 
   const fileContents = await Promise.all(
@@ -29,7 +29,7 @@ async function toFiles() {
 
   const newFile = fileContents.join(' ');
 
-  await fs.writeFile('./fileAll.txt', newFile);
+  await fs.writeFile('./filesAll.txt', newFile);
 }
 
 toFiles();

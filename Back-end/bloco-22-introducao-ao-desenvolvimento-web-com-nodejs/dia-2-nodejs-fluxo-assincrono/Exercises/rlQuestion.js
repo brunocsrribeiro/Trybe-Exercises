@@ -17,13 +17,13 @@ function question(message) {
 }
 
 async function startFlow() {
-  const fileName = await question('Digite o arquivo que deseja ler: ');
+  const fileName = await question('Enter the file you want to read: ');
 
   try {
     const fileContent = await fs.readFile(fileName, encoding);
     console.log(fileContent);
   } catch (e) {
-    console.error('Arquivo inexistente!');
+    console.error('File does not exist!');
   };
 }
 
